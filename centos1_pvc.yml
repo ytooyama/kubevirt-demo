@@ -34,7 +34,7 @@ spec:
       volumes:
       - name: disk0
         persistentVolumeClaim:
-          claimName: cent7-local
+          claimName: centos7
       - cloudInitNoCloud:
           userData: |
             #cloud-config

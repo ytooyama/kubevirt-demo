@@ -34,7 +34,7 @@ spec:
       volumes:
       - name: disk0
         persistentVolumeClaim:
-          claimName: ubuntu-bionic-local
+          claimName: ubuntu-bionic
       - cloudInitNoCloud:
           userData: |
             #cloud-config

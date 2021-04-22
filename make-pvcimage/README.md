@@ -46,6 +46,9 @@ kubectl logs -f importer-fedora
 http{
     # ファイル一覧を有効化
     autoindex on;
+    # 正確なサイズで表示しない（ファイルサイズに単位をつける）
+    autoindex_exact_size off;
+    ...
 }
 ```
 

@@ -34,7 +34,7 @@ spec:
       volumes:
       - name: disk0
         persistentVolumeClaim:
-          claimName: ubuntu-focal-local
+          claimName: ubuntu-focal
       - cloudInitNoCloud:
           userData: |
             #cloud-config
