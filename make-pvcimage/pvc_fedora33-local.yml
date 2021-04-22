@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: "fedora33"
+  labels:
+    app: containerized-data-importer
+  annotations:
+    kubevirt.io/provisionOnNode: kubevirt-demo2
+    cdi.kubevirt.io/storage.import.endpoint: "http://192.168.0.9/Fedora-Cloud-Base-33-1.2.x86_64.raw.xz"
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: kubevirt-hostpath-provisioner

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: "centos7"
+  labels:
+    app: containerized-data-importer
+  annotations:
+    kubevirt.io/provisionOnNode: kubevirt-demo2
+    cdi.kubevirt.io/storage.import.endpoint: "http://192.168.0.9/CentOS-7-x86_64-GenericCloud-2009.qcow2"
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 12Gi
+  storageClassName: kubevirt-hostpath-provisioner
