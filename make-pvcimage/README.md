@@ -32,7 +32,7 @@ spec:
 kubectl create -f pvc_fedora.yml
 ```
 
-以下のようなコマンドで、イメージ書き込みのステータスを確認。たまに止まったりする。失敗っぽいときは`kubectl delete -f pvc_fedora.yml --wait`し他あと、`kubectl create -f pvc_fedora.yml`して再試行。
+以下のようなコマンドで、イメージ書き込みのステータスを確認。たまに止まったりする。失敗っぽいときは`kubectl delete -f pvc_fedora.yml --wait`したあと、`kubectl create -f pvc_fedora.yml`して再試行。
 
 ```bash
 kubectl logs -f importer-fedora
