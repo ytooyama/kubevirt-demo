@@ -5,14 +5,14 @@ metadata:
   generation: 1
   labels:
     kubevirt.io/os: linux
-  name: focal1
+  name: vm1
 spec:
   running: true
   template:
     metadata:
       creationTimestamp: null
       labels:
-        kubevirt.io/domain: focal1
+        kubevirt.io/domain: vm1
     spec:
       domain:
         cpu:
@@ -34,13 +34,13 @@ spec:
       volumes:
       - name: disk0
         persistentVolumeClaim:
-          claimName: ubuntu-focal
+          claimName: fedora
       - cloudInitNoCloud:
           userData: |
             #cloud-config
-            hostname: focal1
-            disable_root: false
-            password: myfocal
+            hostname: vm1
             ssh_pwauth: True
-            chpasswd: { expire: False }
+            disable_root: false
+            ssh_authorized_keys:
+            - ssh-rsa YOUR_SSH_PUB_KEY_HERE
         name: cloudinitdisk

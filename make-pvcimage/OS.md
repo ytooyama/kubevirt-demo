@@ -9,6 +9,7 @@ KubeVirtで公式のクラウドイメージを使ってVMを作成しログイ�
 - CentOS Stream 8
 - Debian 9
 - Fedora 33
+- Red Hat Enterprise Linux 8.3
 - Ubuntu 18.04LTS bionic
 - Ubuntu 20.04LTS focal
 
