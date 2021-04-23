@@ -6,7 +6,7 @@ metadata:
     app: containerized-data-importer
   annotations:
     kubevirt.io/provisionOnNode: kubevirt-demo2
-    # Use This Image: http://public-yum.oracle.com/oracle-linux-templates.html (requirement: Storrage More than 37GB)
+    # Use This Image: http://public-yum.oracle.com/oracle-linux-templates.html (requirement: Storage More than 37GB)
     cdi.kubevirt.io/storage.import.endpoint: "http://192.168.0.9/OL8U3_x86_64-olvm-b78.qcow2"
 spec:
   accessModes:
