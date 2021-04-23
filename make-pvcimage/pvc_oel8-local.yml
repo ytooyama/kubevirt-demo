@@ -1,17 +1,17 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: "rhel8"
+  name: "oel8"
   labels:
     app: containerized-data-importer
   annotations:
     kubevirt.io/provisionOnNode: kubevirt-demo2
-    # Use This Image: https://access.redhat.com/downloads/
-    cdi.kubevirt.io/storage.import.endpoint: "http://192.168.0.9/rhel-8.3-update-2-x86_64-kvm.qcow2"
+    # Use This Image: http://public-yum.oracle.com/oracle-linux-templates.html (requirement: Storrage More than 37GB)
+    cdi.kubevirt.io/storage.import.endpoint: "http://192.168.0.9/OL8U3_x86_64-olvm-b78.qcow2"
 spec:
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 12Gi
+      storage: 40Gi
   storageClassName: kubevirt-hostpath-provisioner

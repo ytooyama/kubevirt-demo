@@ -6,6 +6,7 @@ metadata:
     app: containerized-data-importer
   annotations:
     kubevirt.io/provisionOnNode: kubevirt-demo2
+    # Use This Image: https://alt.fedoraproject.org/cloud/
     cdi.kubevirt.io/storage.import.endpoint: "http://192.168.0.9/Fedora-Cloud-Base-33-1.2.x86_64.raw.xz"
 spec:
   accessModes:

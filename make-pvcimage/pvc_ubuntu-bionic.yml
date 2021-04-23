@@ -6,6 +6,7 @@ metadata:
     app: containerized-data-importer
   annotations:
     kubevirt.io/provisionOnNode: kubevirt-demo2
+    # Use This Image: https://cloud-images.ubuntu.com/bionic/
     cdi.kubevirt.io/storage.import.endpoint: "http://192.168.0.9/bionic-server-cloudimg-amd64.img"
 spec:
   accessModes:

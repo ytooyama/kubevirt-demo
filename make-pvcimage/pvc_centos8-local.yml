@@ -6,6 +6,7 @@ metadata:
     app: containerized-data-importer
   annotations:
     kubevirt.io/provisionOnNode: kubevirt-demo2
+    # Use This Image: http://cloud.centos.org/centos/8/images/
     cdi.kubevirt.io/storage.import.endpoint: "http://192.168.0.9/CentOS-8-GenericCloud-8.3.2011-20201204.2.x86_64.qcow2"
 spec:
   accessModes:
